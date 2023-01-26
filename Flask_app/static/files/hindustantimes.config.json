@@ -1,0 +1,72 @@
+{
+    "script_file":"auto_download",
+
+    "crawl_url":{
+    "url" : "https://epaper.hindustantimes.com/"
+    },
+
+    "add_suffix":"True",
+    
+    "add_url_suffix":{
+        "delhi":"delhi/",
+        "mumbai":"mumbai/",
+        "chandigarh":"chandigarh/",
+        "lucknow":"lucknow/",
+        "bengaluru":"bengaluru/",
+        "pune":"pune/"
+    },
+
+    "login":{
+        "login_icon":"//*[@id='toggle-sidebar-right']",
+        "email": "news@ankiti.com",
+        "password": "Zmonitor@8212",
+        "emailbox": "//*[@id='phoneEmail']",
+        "passwordbox": "//*[@id='upass']",
+        "continue":"//*[@id='btSubmit']",
+        "loginbtn": "//*[@id='btnLogin']"
+    },
+
+    "scroll":{
+        "scrolldown": "window.scrollTo(0, document.body.scrollHeight);"
+    },
+
+    "logout":{
+        "usericon": "//*[local-name()='svg' and contains(@data-testid,'PersonRoundedIcon')]",
+        "logouticon": "//li[@class='MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button'][2]"
+    },
+
+
+    "skip":{
+        "skip_element1":  "//*[@id='webpush-prompt']/div[1]",
+        "skip_to":"//*[@id='firstStep']/div[2]/div[2]/button[1]",
+        "option_bar": "//*[@id='myHeader']/div/header/div/div[1]/a/span",
+        "download_edition": "//*[@id='ancrDownPage']",
+        "I_understand":"//*[@id='btnAcceptDownloadpassword']"
+        
+    },
+
+
+    "nextpageicon":{
+        "next":"//*[@id='next-button']"
+    },
+
+    "download":{
+        "paper":"Fullpaper",
+        "city_name": ["delhi","mumbai","chandigarh","chennai","delhi","goa","hyderabad","jaipur","kochi","kolkata","lucknow","mumbai","pune"]
+        
+    },
+
+    "getattribute":{
+        "src":"//img[@alt='Page']"
+    },
+    
+    "location":{
+        "directory_name":"hindustantimes",
+        "file_name":"page_",
+        "format":".jpeg"
+    },
+
+    "functionCall":{
+        "dwonload_papers":"scrape_with_cityname"
+        }
+}

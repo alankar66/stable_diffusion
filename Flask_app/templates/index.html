@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Upload Files</title>
+    <meta charset="utf-8">
+    
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js">script></script>
+
+    <style>hr, h3 {padding-bottom: 20px;}canvas {background-color: #fffff;}</style>
+    <style>
+    </style>
+  </head>
+ <body>
+   
+    <div class="container">
+      <form method=post action="/upload" enctype=multipart/form-data>
+        <fieldset>
+        <legend><h1>Upload json file for model tarining</h1></legend>
+      <p><input type=file id="json_file" name=file accept=".json" required></p>
+      <p><input type=submit value=Upload></p>
+      </form>
+    </div>  
+
+    <div class="container">
+      <form method=post action="/upload_zip" enctype=multipart/form-data>
+        <fieldset>
+        <legend><h1>Upload json file for model tarining</h1></legend>
+      <p><input type=file id="zip_file" name=file accept=".zip" required></p>
+      <label for="fname" required>Enter name of your zip file</label>
+      <p><input type="file name" name="fileid" required></p>
+      <p><input type=submit value=Upload></p>
+      </form>
+    </div>  
+
+  </body>
+</html>
