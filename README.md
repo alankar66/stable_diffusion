@@ -1,4 +1,17 @@
-# check the commands.txt in the repo
+# There are 2 docker images one for windows and second is linux based but the EveryDream2trainer
+repo is compitable for windows
+
+# Build a Docker file
+docker build . -t windows:v1
+
+#After the successfull build run the container and make sure that it has a open port 5000
+docker run -it -d --name {container_name} -p 5000:5000 -v {add_directory_path}:/app windows:v1 bin/bash
+
+# toggle to /app directory and run
+python Flask_code/test.py
+
+
+
 
 
 # EveryDream Trainer 2.0
