@@ -1,0 +1,11 @@
+docker build . -t windows:v1
+
+docker run -it -d --name docker2 -p 5000:5000 -v D:\stable_difussion\stable_code:/app stable:v2 bin/bash
+
+python utils/convert_original_stable_diffusion_to_diffusers.py --scheduler_type ddim --original_config_file v1-inference.yaml --image_size 512 --checkpoint_path sd_v1-5_vae.ckpt --prediction_type epsilon --upcast_attn False --dump_path "ckpt_cache/sd_v1-5_vae"
+
+
+python utils/convert_original_stable_diffusion_to_diffusers.py --scheduler_type ddim --original_config_file v2-inference-v.yaml --image_size 768 --checkpoint_path sd_v1-5_vae.ckpt --prediction_type v_prediction --upcast_attn False --dump_path "ckpt_cache/v2-1_768-nonema-pruned"
+
+
+python train.py --resume_ckpt "sd_v1-5_vae" --data_root "D:\stable_difussion\stable_code\flask_code\static\files\final\test" --max_epochs 50 --data_root "input" --lr_scheduler cosine --project_name myproj --batch_size 6 --sample_steps 200 --lr 3e-6 --ckpt_every_n_minutes 10 --useadam8bit --ed1_mode
