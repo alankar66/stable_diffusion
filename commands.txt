@@ -1,6 +1,9 @@
+To build a image from docker file run the command.
 docker build . -t windows:v1
 
+After the successfull build run the container and make sure that it has a open port 5000
 docker run -it -d --name docker2 -p 5000:5000 -v D:\stable_difussion\stable_code:/app stable:v2 bin/bash
+
 
 python utils/convert_original_stable_diffusion_to_diffusers.py --scheduler_type ddim --original_config_file v1-inference.yaml --image_size 512 --checkpoint_path sd_v1-5_vae.ckpt --prediction_type epsilon --upcast_attn False --dump_path "ckpt_cache/sd_v1-5_vae"
 
