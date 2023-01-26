@@ -1,5 +1,4 @@
-# There are 2 docker images one for windows and second is linux based but the EveryDream2trainer
-repo is compitable for windows
+# There are 2 docker images in repo, one is for windows and second is for linux, but the EveryDream2trainer repo is compitable for windows
 
 # Build a Docker file
 docker build . -t windows:v1
