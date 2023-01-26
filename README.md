@@ -1,3 +1,6 @@
+# check the commands.txt in the repo
+
+
 # EveryDream Trainer 2.0
 
 Welcome to v2.0 of EveryDream trainer! Now with more diffusers and even more features!
