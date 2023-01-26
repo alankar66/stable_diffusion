@@ -10,6 +10,11 @@ docker run -it -d --name {container_name} -p 5000:5000 -v {add_directory_path}:/
 # toggle to /app directory and run
 python Flask_code/test.py
 
+# Now call the api to run train.py in body
+http://127.0.0.1:5000/upload
+params:{
+"file": "json_file"
+}
 
 
 
